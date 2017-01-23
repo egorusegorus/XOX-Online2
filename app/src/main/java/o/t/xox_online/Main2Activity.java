@@ -47,7 +47,7 @@ public class Main2Activity extends AppCompatActivity {
         String sign = "";
         txt = (String) textView2.getText();
         int click = 0;
-        if (txt == "You play second: sadasd") {
+        if (txt == "You play second: sadasdasdasdas") {
             sign = "O";
         } else {
             sign = "X";
