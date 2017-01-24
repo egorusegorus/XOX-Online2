@@ -5,9 +5,11 @@ import o.t.xox_online.Main2Activity;
  */
 
 public class check {
+
+   public String[] tab = {"", "", "", "", "", "", "", "", ""};
     //wygrane
     void check () {
-        String[] tab = {"", "", "", "", "", "", "", "", ""};
+
         if (tab[0] == tab[1] && tab[1] == tab[2] && tab[0] != "") {
         }
         if (tab[3] == tab[4] && tab[5] == tab[4] && tab[3] != "") {

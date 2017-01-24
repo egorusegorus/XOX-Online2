@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 import java.util.Random;
 
 public class Main2Activity extends AppCompatActivity {
@@ -186,20 +187,20 @@ public class Main2Activity extends AppCompatActivity {
         if (textView2.getText() == "You play second: O") {    //cpu play first
             if (textView3.getText().equals("0")) {
                 Random random = new Random();
-                int a = random.nextInt(4) + 1;
-                if (a == 1) {
+                int a = random.nextInt(4);
+                if (a == 0) {
                     button6.setText("X");
                     button6.setEnabled(false);
                     move_number();
-                } else if (a == 2) {
+                } else if (a == 1) {
                     button8.setText("X");
                     button8.setEnabled(false);
                     move_number();
-                } else if (a == 3) {
+                } else if (a == 2) {
                     button12.setText("X");
                     button12.setEnabled(false);
                     move_number();
-                } else if (a == 4) {
+                } else if (a == 3) {
                     button14.setText("X");
                     button14.setEnabled(false);
                     move_number();
@@ -604,20 +605,20 @@ public class Main2Activity extends AppCompatActivity {
                 if (button10.getText().equals("X")) {
                     int a;
                     Random random = new Random();
-                    a = random.nextInt(4 - 1) + 1;
-                    if (a == 1) {
+                    a = random.nextInt(4);
+                    if (a == 0) {
                         button6.setText("O");
                         button6.setEnabled(false);
                         move_number();
-                    } else if (a == 2) {
+                    } else if (a == 1) {
                         button8.setText("O");
                         button8.setEnabled(false);
                         move_number();
-                    } else if (a == 3) {
+                    } else if (a == 2) {
                         button12.setText("O");
                         button12.setEnabled(false);
                         move_number();
-                    } else if (a == 4) {
+                    } else if (a == 3) {
                         button14.setText("O");
                         button14.setEnabled(false);
                         move_number();
