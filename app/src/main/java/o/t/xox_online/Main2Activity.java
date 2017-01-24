@@ -47,7 +47,7 @@ public class Main2Activity extends AppCompatActivity {
         String sign = "";
         txt = (String) textView2.getText();
         int click = 0;
-        if (txt == "You play second: sadasdasdasdas") {
+        if (txt.equals("You play second: O")) {
             sign = "O";
         } else {
             sign = "X";
@@ -166,7 +166,9 @@ public class Main2Activity extends AppCompatActivity {
         TextView textView3 = (TextView) findViewById(R.id.textView3);
         ruch = Integer.parseInt(textView3.getText().toString());
         ruch = ruch + 1;
-        textView3.setText(Integer.toString(ruch));
+        String a;
+        a=Integer.toString(ruch);
+        textView3.setText(a);
     }
 
     void game_a() {
@@ -263,7 +265,27 @@ public class Main2Activity extends AppCompatActivity {
         }
         if (textView3.getText().equals("4") && textView2.getText() == "You play second: O") {
             if (button10.getText().equals("O")) {
-                if (button6.getText().equals("")) {
+                if(button7.getText().equals("O")){
+                    button13.setText("X");
+                    button13.setEnabled(false);
+                    move_number();
+                }
+                else if(button9.getText().equals("O")){
+                    button11.setText("X");
+                    button11.setEnabled(false);
+                    move_number();
+                }
+               else if(button11.getText().equals("O")){
+                    button9.setText("X");
+                    button9.setEnabled(false);
+                    move_number();
+                }
+               else if(button13.getText().equals("O")){
+                    button7.setText("X");
+                    button7.setEnabled(false);
+                    move_number();
+                }
+                else if (button6.getText().equals("")) {
                     button6.setText("X");
                     button6.setEnabled(false);
                     move_number();
@@ -509,6 +531,46 @@ public class Main2Activity extends AppCompatActivity {
                 button10.setText("X");
                 button10.setEnabled(false);
                 move_number();
+            } else {
+                Random random= new Random();
+                int a;
+                a=random.nextInt(9);
+                if (a==0&&button6.getText().equals("")){
+                    button6.setText("X");
+                    button6.setEnabled(false);
+                    move_number();}
+                else if (a==1&&button7.getText().equals("")){
+                    button7.setText("X");
+                    button7.setEnabled(false);
+                    move_number();}
+                else if (a==2&&button8.getText().equals("")){
+                    button8.setText("X");
+                    button8.setEnabled(false);
+                    move_number();}
+                else if (a==3&&button9.getText().equals("")){
+                    button9.setText("X");
+                    button9.setEnabled(false);
+                    move_number();}
+                else if (a==4&&button10.getText().equals("")){
+                    button10.setText("X");
+                    button10.setEnabled(false);
+                    move_number();}
+                else if (a==5&&button11.getText().equals("")){
+                    button11.setText("X");
+                    button11.setEnabled(false);
+                    move_number();}
+                else if (a==6&&button12.getText().equals("")){
+                    button12.setText("X");
+                    button12.setEnabled(false);
+                    move_number();}
+                else if (a==7&&button13.getText().equals("")){
+                    button13.setText("X");
+                    button13.setEnabled(false);
+                    move_number();}
+                else if (a==8&&button14.getText().equals("")){
+                    button14.setText("X");
+                    button14.setEnabled(false);
+                    move_number();}
             }
         }
         if (textView3.getText().equals("8") && textView2.getText() == "You play second: O") {
@@ -857,7 +919,37 @@ public class Main2Activity extends AppCompatActivity {
                     button8.setText("O");
                     button8.setEnabled(false);
                     move_number();}
-
+                  else {Random random =new Random();
+                int a;
+                a=random.nextInt(9);
+                    if (a==0&&button6.getText().equals("")){button6.setText("O");
+                        button6.setEnabled(false);
+                        move_number();}
+                    else if (a==1&&button7.getText().equals("")){button7.setText("O");
+                        button7.setEnabled(false);
+                        move_number();}
+                    else if (a==2&&button8.getText().equals("")){button8.setText("O");
+                        button8.setEnabled(false);
+                        move_number();}
+                    else if (a==3&&button9.getText().equals("")){button9.setText("O");
+                        button9.setEnabled(false);
+                        move_number();}
+                    else if (a==4&&button10.getText().equals("")){button10.setText("O");
+                        button10.setEnabled(false);
+                        move_number();}
+                    else if (a==5&&button11.getText().equals("")){button11.setText("O");
+                        button11.setEnabled(false);
+                        move_number();}
+                    else if (a==6&&button12.getText().equals("")){button12.setText("O");
+                        button12.setEnabled(false);
+                        move_number();}
+                    else if (a==7&&button13.getText().equals("")){button13.setText("O");
+                        button13.setEnabled(false);
+                        move_number();}
+                    else if (a==8&&button14.getText().equals("")){button14.setText("O");
+                        button14.setEnabled(false);
+                        move_number();}
+                }
               }
 
             if (textView3.getText().equals("7")) {
