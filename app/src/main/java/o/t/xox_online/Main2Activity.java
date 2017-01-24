@@ -745,9 +745,10 @@ public class Main2Activity extends AppCompatActivity {
                     button9.setText("O");
                     button9.setEnabled(false);
                     move_number();}
-                else if(button10.getText().equals("X")&&button12.getText().equals("X")&&button8.getText().equals("")) {
-                    button8.setText("O");
-                    button8.setEnabled(false);
+
+                else if(button10.getText().equals("X")&&button12.getText().equals("X")&&button8.getText().equals("O")) {
+                    button6.setText("O");
+                    button6.setEnabled(false);
                     move_number();}
                 else if(button10.getText().equals("X")&&button13.getText().equals("X")&&button7.getText().equals("")) {
                     button7.setText("O");
@@ -821,6 +822,10 @@ public class Main2Activity extends AppCompatActivity {
                     button14.setText("O");
                     button14.setEnabled(false);
                     move_number();}
+
+
+
+
             }
 
               if (textView3.getText().equals("5")) {
@@ -948,6 +953,33 @@ public class Main2Activity extends AppCompatActivity {
                         button13.setEnabled(false);
                         move_number();}
                     else if (a==8&&button14.getText().equals("")){button14.setText("O");
+                        button14.setEnabled(false);
+                        move_number();}
+                    else if(button6.getText().equals("")){button6.setText("O");
+                    button6.setEnabled(false);
+                    move_number();}
+                    else if(button7.getText().equals("")){button7.setText("O");
+                        button7.setEnabled(false);
+                        move_number();}
+                    else if(button8.getText().equals("")){button8.setText("O");
+                        button8.setEnabled(false);
+                        move_number();}
+                    else if(button9.getText().equals("")){button9.setText("O");
+                        button9.setEnabled(false);
+                        move_number();}
+                    else if(button10.getText().equals("")){button10.setText("O");
+                        button10.setEnabled(false);
+                        move_number();}
+                    else if(button11.getText().equals("")){button11.setText("O");
+                        button11.setEnabled(false);
+                        move_number();}
+                    else if(button12.getText().equals("")){button12.setText("O");
+                        button12.setEnabled(false);
+                        move_number();}
+                    else if(button13.getText().equals("")){button13.setText("O");
+                        button13.setEnabled(false);
+                        move_number();}
+                    else if(button14.getText().equals("")){button14.setText("O");
                         button14.setEnabled(false);
                         move_number();}
                 }
