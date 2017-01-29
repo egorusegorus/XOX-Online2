@@ -116,24 +116,34 @@
         android:textColorHighlight="@android:color/black"
         android:textColor="@android:color/black" />
 
-    <TextView
-        android:text="Now play: "
+    <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button12"
-        android:layout_alignLeft="@+id/button12"
-        android:layout_alignStart="@+id/button12"
-        android:layout_marginTop="34dp"
-        android:id="@+id/textView2" />
+        android:layout_below="@+id/button13"
+        android:layout_marginTop="42dp"
+        android:id="@+id/switch1"
+        android:layout_alignRight="@+id/button13"
+        android:layout_alignEnd="@+id/button13" />
 
     <TextView
+        android:text="@string/human"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
+        android:id="@+id/textView2"
+        android:layout_alignBaseline="@+id/switch1"
+        android:layout_alignBottom="@+id/switch1"
+        android:layout_alignLeft="@+id/button12"
+        android:layout_alignStart="@+id/button12" />
+
+    <TextView
+        android:text="@string/cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/switch1"
+        android:layout_alignLeft="@+id/button14"
+        android:layout_alignStart="@+id/button14"
         android:id="@+id/textView3"
-        android:visibility="invisible"
-        android:text="0" />
+        android:layout_alignBaseline="@+id/switch1"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

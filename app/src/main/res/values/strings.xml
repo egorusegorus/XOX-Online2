@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">XOX - Online</string>
-
+    <string name="human">Human play first</string>
+    <string name="cpu">CPU play first</string>
 </resources>
