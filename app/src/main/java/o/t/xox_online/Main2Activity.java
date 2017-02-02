@@ -1,6 +1,8 @@
 package o.t.xox_online;
 
 import android.content.Context;
+import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -893,7 +895,7 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 void inf(){
-
+    MediaPlayer mediaPlayer = MediaPlayer.create(Main2Activity.this,R.raw.ding);
     if (who_win()==0){
         Context context = getApplicationContext();
         CharSequence text = "The Winner is: X";
@@ -901,6 +903,7 @@ void inf(){
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        mediaPlayer.start();
     }else if (who_win()==1){
         Context context = getApplicationContext();
         CharSequence text = "The Winner is: O";
@@ -908,8 +911,16 @@ void inf(){
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-    }
-}
+        mediaPlayer.start();
+    }else if (who_win()==3){Context context = getApplicationContext();
+        CharSequence text = "TIE";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+        mediaPlayer.start();
+    }}
+
     public int who_win () {
         Button b0 = (Button) findViewById(R.id.button6);
         Button b1 = (Button) findViewById(R.id.button7);
@@ -922,7 +933,7 @@ void inf(){
         Button b8 = (Button) findViewById(R.id.button14);
         Switch switcher1 = (Switch) findViewById(R.id.switch1);
         String tab[] = {"", "", "", "", "", "", "", "", ""};
-        int winer = 3;
+        int winer = 5;
         tab[0] = b0.getText().toString();
         tab[1] = b1.getText().toString();
         tab[2] = b2.getText().toString();
@@ -933,7 +944,7 @@ void inf(){
         tab[7] = b7.getText().toString();
         tab[8] = b8.getText().toString();
 
-        if (switcher1.isChecked()) {
+
             if (tab[0] == tab[1] && tab[1] == tab[2] && tab[0] == "X" ||
                     tab[3] == tab[4] && tab[5] == tab[4] && tab[3] == "X" ||
                     tab[6] == tab[7] && tab[8] == tab[6] && tab[6] == "X" ||
@@ -956,6 +967,6 @@ void inf(){
                 //WYGRAL O
                 winer=1;
 
-            }
-        }return winer;}
+            } else if (tab[0]!=""&&tab[1]!=""&&tab[2]!=""&&tab[3]!=""&&tab[4]!=""&&tab[5]!=""&&tab[6]!=""&&tab[7]!=""&&tab[8]!=""){winer=3;}
+        return winer;}
 }
