@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="TURN ON BLUETOOTH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button16" />
+
+    <Button
+        android:text="GET VISIBLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button17" />
+
+    <Button
+        android:text="LIST DEVICES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button18" />
+
+    <Button
+        android:text="TURN OFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button19" />
+
+    <Button
+        android:text="START GAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button20" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView" />
+
+</LinearLayout>
