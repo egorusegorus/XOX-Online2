@@ -25,6 +25,13 @@
             android:id="@+id/button" />
 
         <Button
+            android:text="MULTIPLAYER - BLUETOOTH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button15"
+            android:elevation="1dp" />
+
+        <Button
             android:text="MULTIPLAYER - RANKING GAME"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -2,7 +2,6 @@ package o.t.xox_online;
 
 import android.content.Context;
 import android.media.MediaPlayer;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +9,6 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import java.util.Random;
 
 public class Main2Activity extends AppCompatActivity {
@@ -23,6 +20,8 @@ public class Main2Activity extends AppCompatActivity {
         click_X();
         X_or_O();
         AI_win_prediction();
+        i_tell_you_what_is_your_symbol();
+        block();
 
 
 
@@ -43,24 +42,29 @@ public class Main2Activity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b1.setText("X");
                 b1.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b2.setText("X");
                 b2.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b3.setText("X");
                 b3.setEnabled(false);
                 AI_win_prediction();
@@ -70,55 +74,66 @@ public class Main2Activity extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b4.setText("X");
                 b4.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b5.setText("X");
                 b5.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b6.setText("X");
                 b6.setEnabled(false);
                 AI_win_prediction();
                 inf();
-            }
+                }
         });
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b7.setText("X");
                 b7.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b8.setText("X");
                 b8.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i_tell_you_what_is_your_symbol();
                 b9.setText("X");
                 b9.setEnabled(false);
                 AI_win_prediction();
                 inf();
+
             }
         });
     }
@@ -158,6 +173,8 @@ public class Main2Activity extends AppCompatActivity {
             b1.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
@@ -166,6 +183,8 @@ public class Main2Activity extends AppCompatActivity {
                 b2.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
@@ -174,6 +193,8 @@ public class Main2Activity extends AppCompatActivity {
                 b3.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
@@ -182,6 +203,8 @@ public class Main2Activity extends AppCompatActivity {
                 b4.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
         b5.setOnClickListener(new View.OnClickListener() {
@@ -190,6 +213,7 @@ public class Main2Activity extends AppCompatActivity {
                 b5.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
 
             }
         });
@@ -199,6 +223,7 @@ public class Main2Activity extends AppCompatActivity {
                 b6.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
@@ -207,6 +232,8 @@ public class Main2Activity extends AppCompatActivity {
                 b7.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
@@ -215,6 +242,8 @@ public class Main2Activity extends AppCompatActivity {
                 b8.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
@@ -223,10 +252,13 @@ public class Main2Activity extends AppCompatActivity {
                 b9.setText("O");
                 AI_win_prediction();
                 inf();
+                i_tell_you_what_is_your_symbol();
+
             }
         });
     }
     void AI_win_prediction() {
+        i_tell_you_what_is_your_symbol();
         Button b0 = (Button) findViewById(R.id.button6);
         Button b1 = (Button) findViewById(R.id.button7);
         Button b2 = (Button) findViewById(R.id.button8);
@@ -436,8 +468,8 @@ public class Main2Activity extends AppCompatActivity {
                 b0.setEnabled(false);
                 inf();}
             else  if (tab[0] == "" && tab[1] == "" && tab[2] == "X" && tab[3] == "" && tab[4] == "" && tab[5] == "" && tab[6] == "O" && tab[7] == "" && tab[8] == "")
-            {b2.setText("O");
-                b2.setEnabled(false);
+            {b4.setText("O");
+                b4.setEnabled(false);
                 inf();}
             else  if (tab[0] == "" && tab[1] == "" && tab[2] == "" && tab[3] == "X" && tab[4] == "" && tab[5] == "" && tab[6] == "O" && tab[7] == "" && tab[8] == "")
             {b2.setText("O");
@@ -912,6 +944,7 @@ void inf(){
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
         mediaPlayer.start();
+        block();
     }else if (who_win()==3){Context context = getApplicationContext();
         CharSequence text = "TIE";
         int duration = Toast.LENGTH_SHORT;
@@ -919,6 +952,7 @@ void inf(){
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
         mediaPlayer.start();
+        block();
     }}
 
     public int who_win () {
@@ -955,6 +989,7 @@ void inf(){
                     tab[2] == tab[4] && tab[6] == tab[2] && tab[6] == "X") {
                 //WYGRAL X
                 winer=0;
+                block();
 
             } else if (tab[0] == tab[1] && tab[1] == tab[2] && tab[0] == "O" ||
                     tab[3] == tab[4] && tab[5] == tab[4] && tab[3] == "O" ||
@@ -966,7 +1001,41 @@ void inf(){
                     tab[2] == tab[4] && tab[6] == tab[2] && tab[6] == "O") {
                 //WYGRAL O
                 winer=1;
-
+                block();
             } else if (tab[0]!=""&&tab[1]!=""&&tab[2]!=""&&tab[3]!=""&&tab[4]!=""&&tab[5]!=""&&tab[6]!=""&&tab[7]!=""&&tab[8]!=""){winer=3;}
         return winer;}
+
+public void block(){
+    Button b0=(Button) findViewById(R.id.button6);
+    Button b1=(Button) findViewById(R.id.button7);
+    Button b2=(Button) findViewById(R.id.button8);
+    Button b3=(Button) findViewById(R.id.button9);
+    Button b4=(Button) findViewById(R.id.button10);
+    Button b5=(Button) findViewById(R.id.button11);
+    Button b6=(Button) findViewById(R.id.button12);
+    Button b7=(Button) findViewById(R.id.button13);
+    Button b8=(Button) findViewById(R.id.button14);
+    b0.setEnabled(false);
+    b1.setEnabled(false);
+    b2.setEnabled(false);
+    b3.setEnabled(false);
+    b4.setEnabled(false);
+    b5.setEnabled(false);
+    b6.setEnabled(false);
+    b7.setEnabled(false);
+    b8.setEnabled(false);
+}
+    public void i_tell_you_what_is_your_symbol(){
+        Switch switcher1= (Switch)findViewById(R.id.switch1);
+        TextView textView2=(TextView) findViewById(R.id.textView2);
+        TextView textView3=(TextView) findViewById(R.id.textView3);
+        if (switcher1.isChecked()){
+            textView3.setText("CPU play first: O");
+            textView2.setText("You play second: X");
+        }else {textView3.setText("CPU play second: X");
+            textView2.setText("You play first: O");}
+
+    }
+
+
 }
